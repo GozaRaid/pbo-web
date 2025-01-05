@@ -40,7 +40,10 @@ export const ReviewList = ({ reviews, mine = false, id }) => {
       {reviews.map((review) => (
         <div key={review.id} className="flex gap-2">
           <Avatar className="w-10 h-10 border">
-            <AvatarImage src="/placeholder-user.jpg" alt={review.displayName} />
+            <AvatarImage
+              src={review.profileImageUrl}
+              alt={review.displayName}
+            />
             <AvatarFallback>{review.displayName}</AvatarFallback>
           </Avatar>
           <div className="flex-1">

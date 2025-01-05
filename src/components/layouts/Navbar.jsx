@@ -203,7 +203,7 @@ export function Navbar() {
               <Button variant="ghost" size="icon" className="rounded-full">
                 <Avatar className="w-10 h-10 border-2">
                   <AvatarImage
-                    src={userData.profile_image_url || "/placeholder-user.jpg"}
+                    src={userData.profileImageUrl || "/placeholder-user.jpg"}
                   />
                   <AvatarFallback>JD</AvatarFallback>
                 </Avatar>
@@ -214,7 +214,7 @@ export function Navbar() {
               <div className="flex items-center gap-2 p-2">
                 <Avatar className="w-10 h-10">
                   <AvatarImage
-                    src={userData.profile_image_url || "/placeholder-user.jpg"}
+                    src={userData.profileImageUrl || "/placeholder-user.jpg"}
                   />
                   <AvatarFallback>JD</AvatarFallback>
                 </Avatar>

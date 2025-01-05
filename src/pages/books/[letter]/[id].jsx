@@ -27,6 +27,11 @@ export default function BookDetail() {
     return user ? user.displayName : "Unknown User";
   };
 
+  const getProfileImageUrl = (userId) => {
+    const user = allUserData.find((user) => user.id === userId);
+    return user ? user.profileImageUrl : "/placeholder-user.jpg";
+  };
+
   if (router.isFallback || !id) {
     return <div>Loading...</div>;
   }
@@ -53,6 +58,7 @@ export default function BookDetail() {
       reviews={reviews.map((review) => ({
         ...review,
         displayName: getDisplayName(review.userId),
+        profileImageUrl: getProfileImageUrl(review.userId),
       }))}
       allUsers={allUserData}
     />
